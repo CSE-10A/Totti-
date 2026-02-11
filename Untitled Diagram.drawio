@@ -1,0 +1,129 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.3.8">
+  <diagram name="Page-1" id="kRVyQCYiInLkhtP6iRrc">
+    <mxGraphModel dx="1215" dy="664" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="iAppxw6uPHEQl412RJ1E-3" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Start" vertex="1">
+          <mxGeometry height="80" width="120" x="350" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="iAppxw6uPHEQl412RJ1E-5" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points" />
+            <mxPoint x="410" y="350" as="sourcePoint" />
+            <mxPoint x="410" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iAppxw6uPHEQl412RJ1E-6" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="Can the 2 numbers be added, subtracted, multiplied, and divided without the answer being undefined?&amp;nbsp;" vertex="1">
+          <mxGeometry height="110" width="220" x="300" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="5K_VPP6Km5YoxUFsIr29-7" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="349.9999999999998" y="690" as="sourcePoint" />
+            <mxPoint x="349.6666666666665" y="689.9047619047619" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5K_VPP6Km5YoxUFsIr29-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Number 1" vertex="1">
+          <mxGeometry height="60" width="120" x="350" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="5K_VPP6Km5YoxUFsIr29-4" edge="1" parent="1" source="5K_VPP6Km5YoxUFsIr29-3" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="iAppxw6uPHEQl412RJ1E-6" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points" />
+            <mxPoint x="310" y="490" as="sourcePoint" />
+            <mxPoint x="360" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5K_VPP6Km5YoxUFsIr29-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Number 2" vertex="1">
+          <mxGeometry height="60" width="120" x="350" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="5K_VPP6Km5YoxUFsIr29-6" edge="1" parent="1" source="5K_VPP6Km5YoxUFsIr29-5" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="5K_VPP6Km5YoxUFsIr29-3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="310" y="580" as="sourcePoint" />
+            <mxPoint x="360" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5K_VPP6Km5YoxUFsIr29-9" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="410" y="750" as="sourcePoint" />
+            <mxPoint x="410" y="730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5K_VPP6Km5YoxUFsIr29-11" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="410" y="840" as="sourcePoint" />
+            <mxPoint x="410" y="810" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5K_VPP6Km5YoxUFsIr29-13" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="If it&#39;s a + sign add Number 1 and 2 together" vertex="1">
+          <mxGeometry height="80" width="80" x="370" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="-ItGjHDAz5Ptntsgaaia-4" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="If it&#39;s a x sign, multiply Number 1 and 2 together.&amp;nbsp;" vertex="1">
+          <mxGeometry height="80" width="80" x="370" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="-ItGjHDAz5Ptntsgaaia-5" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="If it&#39;s a - sign, subtract Number 1 and 2 together" vertex="1">
+          <mxGeometry height="80" width="90" x="365" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="-ItGjHDAz5Ptntsgaaia-6" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="If it&#39;s a / sign, divide Number 1 over Number 2." vertex="1">
+          <mxGeometry height="80" width="80" x="370" y="940" as="geometry" />
+        </mxCell>
+        <mxCell id="-ItGjHDAz5Ptntsgaaia-7" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="End" vertex="1">
+          <mxGeometry height="80" width="120" x="350" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="-ItGjHDAz5Ptntsgaaia-8" edge="1" parent="1" source="-ItGjHDAz5Ptntsgaaia-7" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="-ItGjHDAz5Ptntsgaaia-6" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="630" y="960" as="sourcePoint" />
+            <mxPoint x="680" y="910" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-ItGjHDAz5Ptntsgaaia-9" edge="1" parent="1" source="-ItGjHDAz5Ptntsgaaia-6" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="-ItGjHDAz5Ptntsgaaia-4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="630" y="960" as="sourcePoint" />
+            <mxPoint x="680" y="910" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-ItGjHDAz5Ptntsgaaia-10" edge="1" parent="1" source="5K_VPP6Km5YoxUFsIr29-13" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="5K_VPP6Km5YoxUFsIr29-5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="620" y="650" as="sourcePoint" />
+            <mxPoint x="670" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-ItGjHDAz5Ptntsgaaia-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Addition= +" vertex="1">
+          <mxGeometry height="60" width="120" x="540" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="-ItGjHDAz5Ptntsgaaia-12" edge="1" parent="1" source="5K_VPP6Km5YoxUFsIr29-13" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="-ItGjHDAz5Ptntsgaaia-11" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="630" y="490" as="sourcePoint" />
+            <mxPoint x="680" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-ItGjHDAz5Ptntsgaaia-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Multiplication= x" vertex="1">
+          <mxGeometry height="60" width="120" x="540" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="-ItGjHDAz5Ptntsgaaia-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Subtraction= -" vertex="1">
+          <mxGeometry height="60" width="120" x="540" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="-ItGjHDAz5Ptntsgaaia-15" edge="1" parent="1" source="-ItGjHDAz5Ptntsgaaia-5" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="-ItGjHDAz5Ptntsgaaia-14" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="630" y="610" as="sourcePoint" />
+            <mxPoint x="680" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-ItGjHDAz5Ptntsgaaia-16" edge="1" parent="1" source="-ItGjHDAz5Ptntsgaaia-4" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="-ItGjHDAz5Ptntsgaaia-13" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="630" y="660" as="sourcePoint" />
+            <mxPoint x="680" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-ItGjHDAz5Ptntsgaaia-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Division= /" vertex="1">
+          <mxGeometry height="60" width="120" x="540" y="950" as="geometry" />
+        </mxCell>
+        <mxCell id="-ItGjHDAz5Ptntsgaaia-18" edge="1" parent="1" source="-ItGjHDAz5Ptntsgaaia-6" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="-ItGjHDAz5Ptntsgaaia-17" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="630" y="860" as="sourcePoint" />
+            <mxPoint x="680" y="810" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
