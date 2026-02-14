@@ -1,0 +1,103 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.3.8">
+  <diagram name="Page-1" id="kRVyQCYiInLkhtP6iRrc">
+    <mxGraphModel dx="1215" dy="664" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="AS1h356J_RGydbE3Fni9-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Start." vertex="1">
+          <mxGeometry height="80" width="120" x="360" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="WTJ8h72M5cwlDu2Urm7J-31" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Crossing the street." vertex="1">
+          <mxGeometry height="70" width="100" x="280" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WTJ8h72M5cwlDu2Urm7J-53" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Look Both Ways" vertex="1">
+          <mxGeometry height="60" width="120" x="360" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="WTJ8h72M5cwlDu2Urm7J-62" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="Is a car coming?" vertex="1">
+          <mxGeometry height="80" width="80" x="380" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="WTJ8h72M5cwlDu2Urm7J-64" edge="1" parent="1" source="WTJ8h72M5cwlDu2Urm7J-62" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="340" />
+            </Array>
+            <mxPoint x="420" y="320" as="sourcePoint" />
+            <mxPoint x="560" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WTJ8h72M5cwlDu2Urm7J-66" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="WTJ8h72M5cwlDu2Urm7J-53" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="560" y="240" as="sourcePoint" />
+            <mxPoint x="470" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WTJ8h72M5cwlDu2Urm7J-67" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Yes" vertex="1">
+          <mxGeometry height="30" width="60" x="470" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="WTJ8h72M5cwlDu2Urm7J-69" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Walk across the street" vertex="1">
+          <mxGeometry height="60" width="120" x="360" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="WTJ8h72M5cwlDu2Urm7J-70" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="No" vertex="1">
+          <mxGeometry height="30" width="60" x="400" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="WTJ8h72M5cwlDu2Urm7J-71" edge="1" parent="1" source="WTJ8h72M5cwlDu2Urm7J-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="WTJ8h72M5cwlDu2Urm7J-70">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WTJ8h72M5cwlDu2Urm7J-72" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="End" vertex="1">
+          <mxGeometry height="80" width="120" x="360" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="WTJ8h72M5cwlDu2Urm7J-73" edge="1" parent="1" source="WTJ8h72M5cwlDu2Urm7J-72" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="WTJ8h72M5cwlDu2Urm7J-69" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="420" y="320" as="sourcePoint" />
+            <mxPoint x="470" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WTJ8h72M5cwlDu2Urm7J-74" edge="1" parent="1" source="WTJ8h72M5cwlDu2Urm7J-53" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="AS1h356J_RGydbE3Fni9-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="420" y="320" as="sourcePoint" />
+            <mxPoint x="470" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WTJ8h72M5cwlDu2Urm7J-75" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Walk to the corner of the street." vertex="1">
+          <mxGeometry height="60" width="120" x="360" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="WTJ8h72M5cwlDu2Urm7J-77" edge="1" parent="1" source="WTJ8h72M5cwlDu2Urm7J-62" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="WTJ8h72M5cwlDu2Urm7J-53" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="420" y="320" as="sourcePoint" />
+            <mxPoint x="470" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WTJ8h72M5cwlDu2Urm7J-78" edge="1" parent="1" source="WTJ8h72M5cwlDu2Urm7J-79" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="WTJ8h72M5cwlDu2Urm7J-62" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="420" y="320" as="sourcePoint" />
+            <mxPoint x="470" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WTJ8h72M5cwlDu2Urm7J-79" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="Does the crosswalk sign show the don&#39;t cross symbol?" vertex="1">
+          <mxGeometry height="190" width="280" x="280" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="WTJ8h72M5cwlDu2Urm7J-92" edge="1" parent="1" source="WTJ8h72M5cwlDu2Urm7J-79" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="420" y="450" as="sourcePoint" />
+            <mxPoint x="560" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WTJ8h72M5cwlDu2Urm7J-93" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="560" y="490" as="sourcePoint" />
+            <mxPoint x="560" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WTJ8h72M5cwlDu2Urm7J-95" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="No" vertex="1">
+          <mxGeometry height="30" width="60" x="400" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="WTJ8h72M5cwlDu2Urm7J-99" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="WTJ8h72M5cwlDu2Urm7J-79" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="420" y="650" as="sourcePoint" />
+            <mxPoint x="470" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
