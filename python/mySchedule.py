@@ -1,25 +1,18 @@
-blocks = {
-1: "English",
-2: "Algebra",
-3: "History",
-4: "Chemistry",
-5: "Latin",
-6: "Research",
-7: "Dialogue",
-8: "Art",
-9: "CSE",
-10: "Specials",
-}
+Class1 = "English"
+Class2 = "Algebra"
+Class3 = "History"
+Class4 = "Chemistry"
+Class5 = "Latin"
+Class6 = "Research"
+Class7 = "Dialogue"
+Class8 = "Art"
+Class9 = "CSE"
+Class10 = "Specials"
+ 
+Monday = (Class1, Class10, Class2, Class6)
+Tuesday = (Class2, Class6, Class1, Class4, Class5, Class3)
+Wednesday = (Class9, Class1, Class5, Class8, Class2)
+Thursday = (Class8, Class3, Class4, Class2, Class7)
+Friday = (Class5, Class4, Class3, Class9, Class1)
 
-schedule = {
-"Monday": [1, 10, 2 ,6],
-"Tuesday": [2, 6, 1, 4, 5, 3],
-"Wednesday": [9, 1, 5, 8, 2],
-"Thursday": [8, 3, 4, 2, 7],
-"Friday": [5, 4, 3, 9, 1],
-}
-for day in schedule:
-    print(day + ":")
-    for block in schedule[day]:
-        print ("- " + blocks[block])
-    print()    
+print(Monday, Tuesday, Wednesday, Thursday, Friday)
