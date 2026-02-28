@@ -8,7 +8,7 @@ Class7 = "Dialogue"
 Class8 = "Art"
 Class9 = "CSE"
 Class10 = "Specials"
- 
+
 Monday = (Class1, Class10, Class2, Class6)
 Tuesday = (Class2, Class6, Class1, Class4, Class5, Class3)
 Wednesday = (Class9, Class1, Class5, Class8, Class2)
