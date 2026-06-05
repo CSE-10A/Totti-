@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Totti | Personal Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0d1b2a;
+      --navy-mid: #1a2e44;
+      --cream: #f5f0e8;
+      --gold: #c8a96e;
+      --gold-light: #e8d5b0;
+      --text: #1a1a1a;
+      --muted: #5a6a7a;
+      --white: #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: var(--navy);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2.5rem;
+      height: 64px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+
+    .nav-logo {
+      font-family: 'DM Serif Display', serif;
+      color: var(--gold);
+      font-size: 1.5rem;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--cream);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.85;
+      transition: opacity 0.2s, color 0.2s;
+    }
+
+    .nav-links a:hover { opacity: 1; color: var(--gold); }
+
+    /* ── HERO ── */
+    #home {
+      min-height: 100vh;
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #home::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 60% 40%, rgba(200,169,110,0.12) 0%, transparent 65%),
+                  radial-gradient(ellipse at 20% 80%, rgba(26,46,68,0.8) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    /* Subtle grid texture */
+    #home::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(200,169,110,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200,169,110,0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+
+    .hero-inner { position: relative; z-index: 1; max-width: 640px; animation: fadeUp 0.9s ease both; }
+
+    .hero-tag {
+      display: inline-block;
+      background: rgba(200,169,110,0.15);
+      border: 1px solid rgba(200,169,110,0.35);
+      color: var(--gold);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 0.35rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      color: var(--white);
+      line-height: 1.05;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-name span { color: var(--gold); font-style: italic; }
+
+    .hero-sub {
+      color: rgba(245,240,232,0.65);
+      font-size: 1.05rem;
+      max-width: 420px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 0.75rem 2rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(200,169,110,0.35); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--cream);
+      border: 1.5px solid rgba(245,240,232,0.3);
+    }
+
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+    /* ── SECTIONS ── */
+    section { padding: 6rem 2rem; }
+
+    .container { max-width: 900px; margin: 0 auto; }
+
+    .section-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--navy);
+      line-height: 1.15;
+      margin-bottom: 2.5rem;
+    }
+
+    .divider {
+      width: 48px;
+      height: 3px;
+      background: var(--gold);
+      margin-bottom: 2.5rem;
+      border-radius: 2px;
+    }
+
+    /* ── ABOUT ── */
+    #about { background: var(--cream); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .about-text p { color: #3a4a5a; margin-bottom: 1.1rem; font-size: 1.02rem; }
+
+    .info-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .info-card {
+      background: var(--white);
+      border: 1px solid rgba(200,169,110,0.25);
+      border-left: 3px solid var(--gold);
+      border-radius: 8px;
+      padding: 1.2rem 1.4rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+
+    .info-card h4 {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .info-card p { font-size: 0.95rem; color: var(--text); margin: 0; }
+
+    .contact-box {
+      margin-top: 2rem;
+      background: var(--navy);
+      border-radius: 10px;
+      padding: 1.5rem 1.8rem;
+      color: var(--cream);
+    }
+
+    .contact-box h4 {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-box a {
+      color: var(--gold-light);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    /* ── RESUME ── */
+    #resume { background: var(--navy-mid); }
+    #resume .section-title { color: var(--white); }
+    #resume .section-label { color: var(--gold); }
+
+    .resume-grid { display: flex; flex-direction: column; gap: 2rem; }
+
+    .resume-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(200,169,110,0.2);
+      border-radius: 10px;
+      padding: 1.8rem 2rem;
+      position: relative;
+    }
+
+    .resume-card::before {
+      content: '';
+      position: absolute;
+      top: 1.8rem; left: -1px;
+      width: 3px; height: 2.5rem;
+      background: var(--gold);
+      border-radius: 0 2px 2px 0;
+    }
+
+    .resume-card h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.2rem;
+      color: var(--white);
+      margin-bottom: 0.3rem;
+    }
+
+    .resume-card .meta {
+      font-size: 0.82rem;
+      color: var(--gold);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .resume-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .resume-card ul li {
+      color: rgba(245,240,232,0.8);
+      font-size: 0.96rem;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .resume-card ul li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    /* ── SKILLS ── */
+    #skills { background: var(--cream); }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .skill-category {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 1.8rem;
+      border: 1px solid rgba(200,169,110,0.2);
+      box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+    }
+
+    .skill-category h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.15rem;
+      color: var(--navy);
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .skill-icon {
+      width: 28px; height: 28px;
+      background: rgba(200,169,110,0.15);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.95rem;
+    }
+
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+
+    .skill-tag {
+      background: var(--navy);
+      color: var(--cream);
+      font-size: 0.82rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: 100px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+
+    .skill-tag.gold { background: var(--gold); color: var(--navy); }
+
+    .skill-desc {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── CONTACT SECTION ── */
+    #contact {
+      background: var(--navy);
+      text-align: center;
+    }
+
+    #contact .section-title { color: var(--white); }
+    #contact .section-label { color: var(--gold); }
+
+    #contact .divider { margin: 0 auto 2.5rem; }
+
+    .contact-sub {
+      color: rgba(245,240,232,0.65);
+      max-width: 440px;
+      margin: 0 auto 2.5rem;
+      font-size: 1rem;
+    }
+
+    .contact-email {
+      display: inline-block;
+      background: rgba(200,169,110,0.12);
+      border: 1.5px solid rgba(200,169,110,0.4);
+      color: var(--gold-light);
+      font-size: 1.1rem;
+      padding: 1rem 2.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .contact-email:hover { background: rgba(200,169,110,0.22); transform: translateY(-2px); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      border-top: 1px solid rgba(200,169,110,0.15);
+      text-align: center;
+      padding: 2rem;
+      color: rgba(245,240,232,0.4);
+      font-size: 0.82rem;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 680px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .nav-links { gap: 1.2rem; }
+      .nav-links a { font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Totti</div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#resume">Resume</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-inner">
+    <div class="hero-tag">Welcome to my personal website</div>
+    <h1 class="hero-name">Hi, I'm <span>Totti</span></h1>
+    <p class="hero-sub">A 10th grade student with a passion for sports, technology, and the sciences — driven to grow and make an impact.</p>
+    <div class="hero-cta">
+      <a href="#about" class="btn btn-primary">Learn About Me</a>
+      <a href="#resume" class="btn btn-outline">View Resume</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <p class="section-label fade-in">Who I Am</p>
+    <h2 class="section-title fade-in">About Me</h2>
+    <div class="divider fade-in"></div>
+
+    <div class="about-grid">
+      <div class="about-text fade-in">
+        <p>My name is Totti, and I am a 10th grade student born and raised in New York City. I am passionate about sports, technology, and the world around me, and I approach every new challenge with curiosity and determination.</p>
+        <p>In my free time, I enjoy playing soccer and other sports, as well as video games. I also have a genuine interest in cooking — from simple dishes like eggs to more adventurous recipes involving noodles and other ingredients.</p>
+        <p>I come from a close-knit family and have two younger siblings, a brother and a sister, who keep life exciting. Growing up in New York City has given me a broad perspective and an appreciation for diverse people and ideas.</p>
+        <p>Academically, my goals include becoming a stronger and more confident essay writer, as well as pursuing a career in medicine or the sciences. I believe that hard work, consistency, and a willingness to learn from mistakes are the keys to success.</p>
+
+        <div class="contact-box">
+          <h4>Get In Touch</h4>
+    <a href="mailto:toguntade@browning.edu">Click here to reach out ›</a>
+        </div>
+      </div>
+
+      <div class="info-cards fade-in">
+        <div class="info-card">
+          <h4>Location</h4>
+          <p>New York City, NY</p>
+        </div>
+        <div class="info-card">
+          <h4>Hobbies & Interests</h4>
+          <p>Soccer · Video Games · Cooking · Chess</p>
+        </div>
+        <div class="info-card">
+          <h4>Academic Goals</h4>
+          <p>Improving essay writing skills and pursuing a career in medicine or the sciences.</p>
+        </div>
+        <div class="info-card">
+          <h4>Personal</h4>
+          <p>Oldest of three siblings; a younger brother and sister.</p>
+        </div>
+        <div class="info-card">
+          <h4>Career Aspiration</h4>
+          <p>Medicine / Science — committed to building a strong academic foundation to reach that goal.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section id="resume">
+  <div class="container">
+    <p class="section-label fade-in">My Background</p>
+    <h2 class="section-title fade-in">Resume</h2>
+    <div class="divider fade-in"></div>
+
+    <div class="resume-grid">
+
+      <div class="resume-card fade-in">
+        <h3>Education</h3>
+        <p class="meta">Current · 2022 – 2028</p>
+        <ul>
+          <li>The Browning School — New York, NY</li>
+          <li>Grade 10 (Sophomore) · Class of 2028</li>
+          <li>Maintaining a focused academic schedule with coursework across STEM and humanities</li>
+        </ul>
+      </div>
+
+      <div class="resume-card fade-in">
+        <h3>Relevant Coursework</h3>
+        <p class="meta">Computer Science & Engineering</p>
+        <ul>
+          <li>CSE (Computer Science & Engineering) — explored the full engineering design process, from problem identification to prototyping</li>
+          <li>Applied coding to real-world problem solving; studied the advantages and limitations of AI software</li>
+          <li>Developed foundational programming skills in Python and JavaScript through in-class projects</li>
+        </ul>
+      </div>
+
+      <div class="resume-card fade-in">
+        <h3>Athletics & Extracurricular Activities</h3>
+        <p class="meta">2023 – Present</p>
+        <ul>
+          <li>Varsity Track & Field — Winter & Spring seasons; demonstrates commitment, discipline, and teamwork</li>
+          <li>JV Soccer — Fall season; reinforces leadership and collaborative performance under pressure</li>
+          <li>After-School Chess Club (9th Grade) — improved strategic thinking and competitive playmaking skills while engaging with peers</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <p class="section-label fade-in">What I Bring</p>
+    <h2 class="section-title fade-in">Skills</h2>
+    <div class="divider fade-in"></div>
+
+    <div class="skills-grid">
+
+      <div class="skill-category fade-in">
+        <h3><span class="skill-icon">💻</span> Technical Skills</h3>
+        <div class="skill-tags">
+          <span class="skill-tag gold">Python</span>
+          <span class="skill-tag gold">JavaScript</span>
+          <span class="skill-tag">Web Development Basics</span>
+          <span class="skill-tag">Engineering Design Process</span>
+          <span class="skill-tag">AI Software Literacy</span>
+        </div>
+        <p class="skill-desc">Developed through CSE coursework, I have hands-on experience in Python and JavaScript, along with an understanding of how coding can address real-world problems.</p>
+      </div>
+
+      <div class="skill-category fade-in">
+        <h3><span class="skill-icon">📚</span> Academic Skills</h3>
+        <div class="skill-tags">
+          <span class="skill-tag gold">Quick Learner</span>
+          <span class="skill-tag gold">Peer Support</span>
+          <span class="skill-tag">Grade Improvement</span>
+          <span class="skill-tag">Concept Application</span>
+          <span class="skill-tag">Adaptability</span>
+        </div>
+        <p class="skill-desc">I can pick up new topics quickly and enjoy helping classmates who need assistance. I am also skilled at identifying weak areas and working to significantly improve them over time.</p>
+      </div>
+
+      <div class="skill-category fade-in">
+        <h3><span class="skill-icon">🤝</span> Personal Skills</h3>
+        <div class="skill-tags">
+          <span class="skill-tag gold">Problem Solving</span>
+          <span class="skill-tag gold">Time Management</span>
+          <span class="skill-tag">Organization</span>
+          <span class="skill-tag">Goal Orientation</span>
+          <span class="skill-tag">Teamwork</span>
+        </div>
+        <p class="skill-desc">I approach challenges by generating multiple solutions and evaluating the best path forward. I consistently meet deadlines and keep my work well-organized and research-focused.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <p class="section-label fade-in">Reach Out</p>
+    <h2 class="section-title fade-in">Contact</h2>
+    <div class="divider fade-in"></div>
+    <p class="contact-sub fade-in">I'm always open to connecting — whether for school projects, opportunities, or just to say hello.</p>
+    <a href="mailto:toguntade@browning.edu" class="contact-email fade-in">toguntade@browning.edu</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Totti · Personal Website · The Browning School, Class of 2028</p>
+</footer>
+
+<script>
+  // Scroll-triggered fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
