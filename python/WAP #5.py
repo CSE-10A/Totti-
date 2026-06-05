@@ -1,0 +1,9 @@
+Side1 = 19
+Side2 = 19
+Side3 = 19
+
+if Side1 == Side2 and Side2 == Side3:
+    print("Equilateral")
+else:
+    print("Not equilateral")
+

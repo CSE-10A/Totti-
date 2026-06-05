@@ -1,0 +1,7 @@
+num1 = 8
+num2 = 5
+
+if num1 > num2:
+    print("The larger number is:", num1)
+else:
+    print("the larger number is:", num2)
